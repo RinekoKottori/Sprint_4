@@ -1,1 +1,7 @@
-# Sprint_4
+
+
+## запуск для firefox 
+
+```bash
+mvn clean test -Dbrowser=firefox
+```
