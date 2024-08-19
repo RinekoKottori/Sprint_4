@@ -12,7 +12,6 @@ import praktikum.Pages.HomePage;
 
 @RunWith(Parameterized.class)
 public class FieldsAboutRentPageTest {
-    private WebDriver driver;
     private final int indexOfRent;
     private final String comment;
     private final int indexOfCheckbox;
@@ -32,7 +31,7 @@ public class FieldsAboutRentPageTest {
     public static void PastPages() {
         new AboutRentPage(factory.getDriver())
                 .openDriver();
-        new HomePage(factory.getDriver()).clickOnOrderButton();
+        new HomePage(factory.getDriver()).clickOnOrderButton(".//div[@class='Header_Nav__AGCXC']/button[1]");
         new AboutClientPage(factory.getDriver()).fieldsAboutClientPage("Афанасий",
                 "Михайловский",
                 "Поленова, 11",

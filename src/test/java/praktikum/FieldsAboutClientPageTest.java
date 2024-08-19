@@ -5,7 +5,6 @@ import org.junit.ClassRule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.openqa.selenium.WebDriver;
 import praktikum.Pages.AboutClientPage;
 import praktikum.Pages.HomePage;
 
@@ -32,7 +31,7 @@ public class FieldsAboutClientPageTest {
     public static void closeCookies() {
         new AboutClientPage(factory.getDriver())
                 .openDriver();
-        new HomePage(factory.getDriver()).clickOnOrderButton();
+        new HomePage(factory.getDriver()).clickOnOrderButton(".//div[@class='Header_Nav__AGCXC']/button[1]");
     }
 
     @Parameterized.Parameters

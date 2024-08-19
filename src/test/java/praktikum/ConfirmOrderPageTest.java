@@ -1,6 +1,8 @@
 package praktikum;
 
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import praktikum.Pages.AboutClientPage;
 import praktikum.Pages.AboutRentPage;
@@ -18,7 +20,7 @@ public class ConfirmOrderPageTest {
     public void initDriver() {
         driver = factory.getDriver();
         new ConfirmOrderPage(driver).openDriver();
-        new HomePage(driver).clickOnOrderButton();
+        new HomePage(driver).clickOnOrderButton(".//div[@class='Header_Nav__AGCXC']/button[1]");
         new AboutClientPage(factory.getDriver()).fieldsAboutClientPage("Афанасий",
                 "Михайловский",
                 "Поленова, 11",
